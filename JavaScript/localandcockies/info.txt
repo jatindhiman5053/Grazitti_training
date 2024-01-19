@@ -1,0 +1,14 @@
+STORAGES:-
+
+Cookies =  4kb;
+local storage = 10mb;
+Session storage = 5mb;
+
+
+ACCESSIBLE:-
+
+Cookies =  Any Window;
+local storage = Any Window;
+Session storage = Same tab;
+
+

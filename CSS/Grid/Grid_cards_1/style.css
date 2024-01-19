@@ -1,0 +1,232 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border: 1px solid lightgray;
+}
+
+.hero{
+    background-color: lightgray;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    height: 60vh;
+}
+
+.card_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 60vh;
+}
+
+.all_cards{
+    display: grid;
+    width: 85%;
+    grid-template-columns: repeat(4,.37fr);
+    grid-template-rows: auto;
+    position: absolute;
+    transform: translate(0%,-50%);
+    text-align: center;
+    gap: 70px;
+}
+
+.card{
+    border: 1px solid lightgray;
+    height: 60vh;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    background-color: white;
+}
+
+.card_pic{
+    font-size: 4rem;
+    margin: 15px 0 0 0;
+    background-color: orangered;
+    color: white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+.card>h1{
+    margin-block: 20px;
+}
+
+.card p:nth-child(3){
+    font-size: 20px;
+    text-align: center;
+    width: 65%;
+    line-height: 1.5;
+    margin-top: 0px;
+}
+
+.card_pic>i{
+    padding: 16px;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background-color: transparent;
+    border-bottom: 1px solid orangered;
+}
+
+.all_cards .card:nth-child(2){
+    position: absolute;
+    transform: translate(130%,20%);
+    width: 20%;
+}
+
+.all_cards .card:nth-child(3){
+    transform: translate(130%,0%);
+}
+
+.all_cards .card:nth-child(4){
+    position: absolute;
+    transform: translate(396%,20%);
+    width: 20%;
+}
+
+.btn:hover{
+    color: orangered;
+    cursor: pointer;
+}
+
+footer{
+    background-color: #333333;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    font-weight: 100;
+}
+
+footer>p>a{
+    color: orangered;
+    opacity: .9;
+}
+
+
+@media (max-width: 992px) and (min-width: 769px) {
+
+    .hero{
+        height: 350px;
+    }
+
+    .all_cards{
+        display: grid;
+        padding: 20px;
+        grid-template-columns: repeat(2,5fr);
+        grid-template-rows: auto;
+        gap: 20px;
+        transform: translate(0%,-28%);
+        height: 60%;
+        position: absolute;
+    }
+
+    .card_wrapper{
+        height: 60vh;
+    }
+
+    .all_cards .card:nth-child(2){
+        position: relative;
+        transform: translate(0%,0%);
+        width: 100%;
+    }
+    
+    .all_cards .card:nth-child(3){
+        transform: translate(0%,0%);
+    }
+    
+    .all_cards .card:nth-child(4){
+        position: relative;
+        transform: translate(0%,0%);
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 600px) {
+    .hero{
+        height: 300px;
+    }
+
+    .all_cards{
+        display: grid;
+        padding: 20px;
+        grid-template-columns: repeat(1,5fr);
+        grid-template-rows: auto;
+        gap: 20px;
+        transform: translate(0%,-15%);
+        height: 60%;
+        position: absolute;
+    }
+
+    .card_wrapper{
+        height: 130vh;
+    }
+
+    .all_cards .card:nth-child(2){
+        position: relative;
+        transform: translate(0%,0%);
+        width: 100%;
+    }
+    
+    .all_cards .card:nth-child(3){
+        transform: translate(0%,0%);
+    }
+    
+    .all_cards .card:nth-child(4){
+        position: relative;
+        transform: translate(0%,0%);
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px)  {
+    .hero{
+        height: 350px;
+    }
+
+    .all_cards{
+        display: grid;
+        padding: 20px;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+        transform: translate(0%,-10%);
+
+        position: absolute;
+    }
+
+    .card_wrapper{
+        height: 1500px;
+    }
+
+    .all_cards .card:nth-child(2){
+        position: relative;
+        transform: translate(0%,0%);
+        width: 100%;
+    }
+    
+    .all_cards .card:nth-child(3){
+        transform: translate(0%,0%);
+    }
+    
+    .all_cards .card:nth-child(4){
+        position: relative;
+        transform: translate(0%,0%);
+        width: 100%;
+    }
+}

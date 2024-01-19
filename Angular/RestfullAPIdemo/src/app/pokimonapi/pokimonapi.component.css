@@ -1,0 +1,12 @@
+.posts{
+    border: 1px solid red;
+    margin: 10px;
+    padding: 20px;
+    width: 40%;
+}
+
+.all-posts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

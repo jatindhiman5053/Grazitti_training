@@ -1,0 +1,17 @@
+<div class="product-list">
+    <app-filter [all]="totalProductCount" [laptops]="totallaptops" [smartphones]="totalsmartphone"
+        [fragrances]="totalfragrancess" [skincare]="totalskincare" [home_decoration]="totalhomedecoration"
+        (SelectedRadioFilterButtonChanged)="onFilterChange($event)">
+    </app-filter>
+
+    <hr>
+
+    <ng-container *ngFor="let prod of products">
+        <!-- <div *ngIf="SelectedFilterRadioButton === 'all' || prod.category === SelectedFilterRadioButton"
+        [product]="prod"> -->
+        <app-product (click)="selectedProduct = prod"
+            *ngIf="searchtext === '' || prod.title.toLowerCase().includes(searchtext)" [product]="prod">
+        </app-product>
+        <!-- </div> -->
+    </ng-container>
+</div>

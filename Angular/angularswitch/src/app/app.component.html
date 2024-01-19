@@ -1,0 +1,59 @@
+<div class="container">
+  <header>
+    <div class="menu-bar">
+      <button (click)="onhomeclick()">Home</button>
+      <button (click)="onproductclick()">product</button>
+      <button (click)="onaboutclick()">about</button>
+      <button (click)="oncontactclick()">contact</button>
+    </div>
+  </header>
+
+
+  <div class="menu-content" [ngSwitch]="tab">
+
+    <div class="home" *ngSwitchDefault>
+      <h1>HOME content</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem deleniti nam optio iste quidem. Vel,
+        minima facere iusto vitae ipsam nemo omnis eaque dicta! Minima.
+      </p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eaque quasi facilis id sint, obcaecati
+        accusantium ipsam odit doloremque dolore, labore, modi ullam recusandae omnis aspernatur rem sapiente reiciendis
+        voluptates?</p>
+    </div>
+
+    <div class="product" *ngSwitchCase="'product'">
+      <h1>product content</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem deleniti nam optio iste quidem. Vel,
+        minima facere iusto vitae ipsam nemo omnis eaque dicta! Minima.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quia explicabo vel ab officia eius accusantium
+        soluta vitae. Sunt aliquam architecto qui voluptas repellendus perspiciatis eius cum voluptatibus alias
+        consequuntur.
+      </p>
+    </div>
+
+    <div class="about" *ngSwitchCase="'about'">
+      <h1>about content</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem deleniti nam optio iste quidem. Vel,
+        minima facere iusto vitae ipsam nemo omnis eaque dicta! Minima.
+      </p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt animi sequi deserunt. At excepturi assumenda
+        culpa optio perspiciatis quidem! Tenetur natus eos temporibus repellendus odit non nam necessitatibus iusto
+        ipsa! Eos est cupiditate maxime, exercitationem nobis ex mollitia adipisci eum.</p>
+    </div>
+
+    <div class="contact" *ngSwitchCase="'contact'">
+      <h1>contact content</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem deleniti nam optio iste quidem. Vel,
+        minima facere iusto vitae ipsam nemo omnis eaque dicta! Minima.
+      </p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam in iure nemo. Ut magnam deserunt sint quibusdam
+        provident, atque dolor facere, nemo soluta, reprehenderit esse voluptatibus ipsum cupiditate. Laboriosam tempora
+        corporis harum possimus! Sunt, quaerat.</p>
+    </div>
+
+  </div>
+
+
+
+
+</div>

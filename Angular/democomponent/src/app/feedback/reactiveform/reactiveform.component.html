@@ -1,0 +1,16 @@
+<div>
+    <form [formGroup]="loginform" (ngSubmit)="loginUserForm()">
+        
+        <input type="text" id="usernameReactive" placeholder="Username" formControlName="username"><br>
+        <span style="color: red;" *ngIf="username && username.invalid && username.touched">invalid Input</span>
+        <br><br>
+        
+        
+        <input type="password" id="passwordReactive" placeholder="Password" formControlName="password"><br>
+        <span style="color: red;" *ngIf="password && password.invalid && password.touched">invalid Input</span>
+        <br><br>
+
+
+        <button type="submit" [disabled]="loginform.invalid">login</button>
+    </form>
+</div>

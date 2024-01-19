@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label for="first_name">First Name</label>
+        <input type="text" placeholder="First Name" id="first_name" autocomplete="given-name"><br><br>
+
+        <label for="last_name">Last Name</label>
+        <input type="text" placeholder="Last Name" id="last_name" autocomplete="family-name"><br><br>
+
+        <label for="age">Age</label>
+        <input type="number" placeholder="Age" id="age" autocomplete="off"><br><br>
+
+        <button id="submit">Add</button>
+        <button id="show">Show</button>
+    </form>
+
+    <table id="data_table">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>Action</th> <!-- Add a column for the delete button -->
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Data will be displayed here -->
+    </tbody>
+</table>
+
+
+    <script src="./websqldatabase.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<div>
+    <hr>
+    <form #signupform="ngForm" (ngSubmit)="submitData(signupform)">
+
+        <label for="firstName">First Name: </label>
+        <input type="text" id="firstName" #firstname="ngModel" name="firstName" pattern="[a-zA-Z]+$" required ngModel>
+        <span *ngIf="firstname.invalid && firstname.touched">invalid Input</span>
+        <br><br>
+
+        <label for="lastName">Last Name: </label>
+        <input type="text" name="lastName" id="lastName" #lastname="ngModel" pattern="[a-zA-Z]+$" required ngModel>
+        <span *ngIf="lastname.invalid && lastname.touched">invalid Input</span>
+        <br><br>
+
+        <label for="country">country: </label>
+        <input type="text" name="country" id="country" #county="ngModel" pattern="[a-zA-Z]+$" required ngModel>
+        <span *ngIf="county.invalid && county.touched">invalid Input</span>
+        <br><br>
+
+        <label for="state">state: </label>
+        <input type="text" name="state" id="state" #state="ngModel" pattern="[a-zA-Z]+$" required ngModel>
+        <span *ngIf="state.invalid && state.touched">invalid Input</span>
+        <br><br>
+
+        <label for="city">city: </label>
+        <input type="text" name="city" id="city" #city="ngModel" pattern="[a-zA-Z]+$" required ngModel>
+        <span *ngIf="city.invalid && city.touched">invalid Input</span>
+        <br><br>
+
+        <button type="submit" [disabled]="signupform.invalid">Submit</button>
+
+    </form>
+    <button type="button">clear</button>
+    <hr>
+</div>

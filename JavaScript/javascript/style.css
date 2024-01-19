@@ -1,0 +1,10 @@
+.top-content::after{
+    display: block;
+    content: url(./Images/partner-agency-line.png);
+    transform: rotate(90deg);
+}
+
+.top-content{
+    height: 140px;
+    margin-top: 80px;
+}

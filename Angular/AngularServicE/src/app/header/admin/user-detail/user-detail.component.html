@@ -1,0 +1,13 @@
+<div class="user-detail-container" *ngIf="Selecteduser">
+    <div>
+        <img class="user-detail-avatar-image"
+            [src]="'./../../../../assets/images/Add-'+ Selecteduser.gender +'-User.svg'">
+    </div>
+    <div class="user-detail-info">
+        <h2>User Detail</h2>
+        <p><b>Name:</b> {{Selecteduser.name}}</p>
+        <p><b>Gender:</b> {{Selecteduser.gender}}</p>
+        <p><b>Subscription Type:</b> {{Selecteduser.Subtype}}</p>
+        <p><b>Status:</b> {{Selecteduser.status}}</p>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<section>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="all-posts">
+
+                    <div class="posts" *ngFor="let pokimon of poki">
+                        <h1>Name:- {{pokimon.name}}</h1>
+                        <div class="d-flex">
+                            <button><a href="{{pokimon.url}}">More Info</a></button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

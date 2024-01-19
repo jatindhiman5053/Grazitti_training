@@ -1,0 +1,32 @@
+<div class="container">
+
+  <div class="search-bar">
+    <input type="search" name="search" pattern=".*\S.*" required autocomplete="off"  [(ngModel)]="filterText" />
+    <button class="search-btn" type="submit">
+      <span>Search</span>
+    </button>
+  </div>
+
+  <div class="table-student">
+    <table id="student">
+      <tbody>
+        <tr class="tablerow">
+          <th>Name</th>
+          <th>Course</th>
+          <th>Marks</th>
+          <th>Percentage</th>
+          <th>DOB</th>
+          <th>Gender</th>
+        </tr>
+        <tr *ngFor="let std of students|filterstudent: filterText">
+          <td>{{ std.name }}</td>
+          <td>{{ std.course }}</td>
+          <td>{{ std.marks | currency: 'INR' }}</td>
+          <td>{{ std.marks | percentage: totalMarks:1 }}</td>
+          <td>{{ std.DOB | date: 'fullDate' }}</td>
+          <td>{{ std.gender | uppercase }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

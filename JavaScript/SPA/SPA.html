@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- bootstrap links  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+
+
+    <!-- jquery Link  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+    <!-- custom style link  -->
+    <link rel="stylesheet" href="./accets/css/SPA.css">
+</head>
+
+<body>
+
+    <!-- header start  -->
+    <header>
+        <nav>
+            <div class="headerContent px-5">
+
+                <div class="headerlogo">
+                    <h1>
+                        <b>POGO</b>
+                    </h1>
+                </div>
+
+                <div class="headertabs">
+                    <div class="headermenu">
+
+                        <ul>
+                            <li>Home</li>
+                            <li>Courses</li>
+                            <li>Tutorial</li>
+                            <li>Blog</li>
+                            <li>Notes</li>
+                        </ul>
+
+                        <div class="halfmoon">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+                                class="hidden md:block text-purple-700 mt-1 ml-2 cursor-pointer dark:text-white"
+                                height="28" width="28" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z">
+                                </path>
+                                <path
+                                    d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="headerbtn">
+
+                        <!-- login button  -->
+                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModalLogin">
+                            Login
+                        </button>
+
+                        <div class="modal fade" id="exampleModalLogin" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog  modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Log In</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <form action="" class="text-center">
+                                            <label for="UserName">Username: </label>
+                                            <input type="text" class="form-control" name="UserName"
+                                                id="loginUserName"><br><br>
+                                            <label for="Password">Password: </label>
+                                            <input type="password" class="form-control" name="Password"
+                                                id="loginPassword">
+                                        </form>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn ">Login</button>
+                                        <button type="button" class="btn " data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- signup button  -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Signup
+                        </button>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog  modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Sign Up</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="" class="text-center">
+                                            <label for="FirstName">First Name: </label>
+                                            <input type="text" class="form-control" name="FirstName" id="FirstName"><br>
+
+                                            <label for="LastName">Last Name: </label>
+                                            <input type="text" class="form-control" name="LastName" id="LastName"><br>
+
+                                            <label for="Email">Email: </label>
+                                            <input type="text" class="form-control" name="Email" id="Email"><br>
+
+                                            <label for="UserName">Username: </label>
+                                            <input type="text" class="form-control" name="UserName" id="UserName"><br>
+
+                                            <label for="Password">Password: </label>
+                                            <input type="password" class="form-control" name="Password"
+                                                id="Password"><br>
+
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary">Register</button>
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </nav>
+    </header>
+    <!-- header end -->
+
+
+    <!-- home section start -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="mainhomecontent">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="homecontent">
+                                    <h1 class="opacity: 0.9;">Welcome to <span
+                                            style="color: #7E22CE; opacity: 1;">CodeWithHarry</span></h1>
+                                    <p>Confused on which course to take? I have got you covered. Browse courses and find
+                                        out the best course for you. Its free! Code With Harry is my attempt to teach
+                                        basics and those coding techniques to people in short time which took me ages to
+                                        learn.</p>
+
+                                    <div class="course-blog-btn">
+                                        <button class="freecourse">Free
+                                            Courses</button>
+                                        <button class="Exploreblog">Explore
+                                            Blog</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="homeimagemain">
+                                    <div class="homeimage"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- home section end -->
+
+    <!-- Recommanded section start  -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="recommandedmain">
+                        <div class="recommandedheading">
+                            <h1>Recommended Courses</h1>
+                        </div>
+
+                        <div class="recommandedcards">
+                            <div class="recommandedvideos">
+                                
+                            </div>
+                            <div class="recommandedvideos">
+
+                            </div>
+                            <div class="recommandedvideos">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Recommanded section end  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./accets/script/SPA.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+.container {
+    border: 2px solid lightgray;
+    width: 60%;
+    margin: 0 auto;
+    background-color: #645f5f;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 20px;
+    color: white;
+}
+
+.menu-bar {
+    border: 1px solid lightgray;
+    display: flex;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    padding-block: 15px;
+}
+
+.menu-content {
+    padding-inline: 75px;
+    color: white;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin: 0;
+}
+
+.contact,
+.about,
+.product,
+.home {
+    margin-block: 35px;
+}

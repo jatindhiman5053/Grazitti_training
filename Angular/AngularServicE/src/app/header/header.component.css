@@ -1,0 +1,12 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    border: 1px solid lightgray;
+    align-items: center;
+}
+
+.logo>p{
+    margin: 0;
+    padding: 10px;
+}

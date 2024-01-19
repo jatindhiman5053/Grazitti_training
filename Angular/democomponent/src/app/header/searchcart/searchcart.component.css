@@ -1,0 +1,24 @@
+.search_cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: end;
+}
+
+.search_cart button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    margin: 0;
+    padding: 20px 10px;
+    font-size: 20px;
+    color: black;
+}
+
+.search_cart a {
+    text-decoration: none;
+    margin: 0;
+    padding: 20px 10px;
+    font-size: 20px;
+    color: black;
+}

@@ -1,0 +1,12 @@
+<div class="header">
+    <div class="logo">
+        <button routerLink="/" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">MYSUTE</button>
+    </div>
+    <div class="menu">
+        <button routerLink="/home" [routerLinkActive]="'active'"  [routerLinkActiveOptions]="{exact: true}">HOME</button>
+        <button (click)="navigateAdmin()" [routerLinkActive]="'active'"  [routerLinkActiveOptions]="{exact: true}">ADMIN</button>
+        <button style="background-color: blue; color: white;" (click)="subscribe()">SUBSCRIBIE</button>
+    </div>
+</div>
+
+<!-- <app-home></app-home> -->

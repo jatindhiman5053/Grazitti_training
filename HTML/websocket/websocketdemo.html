@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script type="text/javascript">
+        var ws;
+
+        function startWebSocket() {
+            if ("WebSocket" in window) {
+                // Check if WebSocket is supported by the browser
+                ws = new WebSocket("ws://localhost:8080"); // Replace with your WebSocket server URL
+
+                ws.onopen = function () {
+                    // WebSocket is connected, you can send data here if needed
+                    console.log("WebSocket is open");
+                };
+
+                ws.onmessage = function (evt) {
+                    // Handle incoming messages
+                    var received_msg = evt.data;
+                    console.log("Received message: " + received_msg);
+                };
+
+                ws.onclose = function () {
+                    // WebSocket connection is closed
+                    console.log("WebSocket is closed");
+                };
+            } else {
+                alert("WebSocket is not supported by your browser.");
+            }
+        }
+
+        function closeWebSocket() {
+            if (ws) {
+                ws.close();
+                console.log("WebSocket is closed");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="sse">
+        <button onclick="startWebSocket()">Start WebSocket</button>
+        <button onclick="closeWebSocket()">Close WebSocket</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="First_name"></label>
+        <input type="text" value="Jatin" id="First_name">
+
+        <label for="last_name"></label>
+        <input type="text" value="Dhiman" id="last_name">
+
+        <label for="address"></label>
+        <input type="text" value="Yamuna Nagar" id="address">
+    </form>
+
+
+
+
+    <script>
+        const ws = new WebSocket("ws://localhost:8082");
+
+        const First_name = document.getElementById('First_name').value;
+        const last_name = document.getElementById('last_name').value;
+        const address = document.getElementById('address').value;
+
+        ws.addEventListener('open', () => {
+
+
+            ws.send(First_name + " " + last_name + " " + address);
+
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+.anim {
+    width: 10%;
+    position: relative;
+    animation-name: rowslide;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes rowslide {
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+        transform: scale(1, 1);
+
+    }
+
+    25% {
+        background-color: yellow;
+        left: 0px;
+        top: -100px;
+        transform: scale(.9, 1.1);
+    }
+
+    50% {
+        background-color: blue;
+        left: 0px;
+        top: 0px;
+        transform: scale(1, 1);
+    }
+
+    75% {
+        background-color: green;
+        left: 0px;
+        top: -100px;
+        transform: scale(.9, 1.1);
+    }
+
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+        transform: scale(1, 1);
+    }
+}
+
+.wrapper .container .row .col {
+    height: 300px;
+}

@@ -1,0 +1,33 @@
+body {
+    margin: 100px auto;
+}
+
+.main {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left,
+.right {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: black;
+    opacity: .5;
+    /* border: 2px solid red; */
+    width: 40%;
+    color: white;
+    gap: 10px;
+    padding-block: 20px;
+    height: 350px;
+}
+
+.list_item {
+    background-color: purple;
+    padding-inline: 80px;
+    cursor: grab;
+
+}

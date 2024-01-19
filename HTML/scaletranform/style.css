@@ -1,0 +1,48 @@
+.section {
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    display: flex;
+    position: relative;
+}
+
+.back_main {
+    position: absolute;
+}
+
+.content {
+    position: absolute;
+    top: 60%;
+}
+
+.back {
+    position: relative;
+}
+
+.back_main {
+    visibility: hidden;
+    transition: 0.4s ease-in-out;
+}
+
+.main:hover .back_main {
+    visibility: visible;
+    transform: scale(1.1);
+    transition: 0.4s ease-in-out;
+}
+
+.outercircle {
+    border: 1px solid red;
+    display: flex;
+    gap: 30px;
+    border-radius: 50px;
+    padding-inline: 20px;
+}
+
+.left,
+.right {
+    border: 1px solid green;
+    border-radius: 50px;
+    padding-inline: 20px;
+}

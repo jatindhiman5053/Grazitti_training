@@ -1,0 +1,214 @@
+@mixin flex-cent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-r {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin dropdown_main_menu {
+    position: absolute;
+    width: 170px;
+    height: 0;
+    color: #fff;
+    top: 62px;
+    background-color: #b08ead;
+    overflow: hidden;
+    z-index: 100;
+    transition: height 0.5s ease-in-out;
+}
+
+@mixin dropdown_menu {
+    list-style: none;
+    z-index: 100;
+    width: 170px;
+    padding: 30px;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+header {
+    position: fixed;
+    background-color: #fff;
+    z-index: 10000;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    nav {
+        .row {
+            position: relative;
+            .header_bar {
+                @include flex-cent();
+                .hamburger {
+                    display: none;
+                }
+
+                .logo {
+                    @include flex-cent();
+                    font-size: 50px
+                }
+            }
+
+            .menu {
+                @include flex-cent();
+                gap: 35px;
+                a {
+                    margin: 0;
+                    font-size: 16px;
+                    text-decoration: none;
+                    color: black;
+                    font-weight: 400;
+                }
+
+                .product_drop {
+                    position: relative;
+                    .dropdown_main_menu {
+                        @include dropdown_main_menu();
+                        .dropdown_menu {
+                            @include dropdown_menu();
+                        }
+                    }
+
+                    &:hover {
+                        .dropdown_main_menu {
+                            height: 120px;
+                            .dropdown_menu {
+                                transform: translateY(0%);
+                            }
+                        }
+                    }
+
+                    .product_btn {
+                        border: none;
+                        outline: none;
+                        background-color: transparent;
+                    }
+                }
+
+                .page_drop {
+                    position: relative;
+                    .dropdown_main_menu {
+                        @include dropdown_main_menu();
+                        .dropdown_menu {
+                            @include dropdown_menu();
+                        }
+                    }
+
+                    &:hover {
+                        .dropdown_main_menu {
+                            height: 120px;
+                            .dropdown_menu {
+                                transform: translateY(0%);
+                            }
+                        }
+                    }
+
+                    .page_btn {
+                        border: none;
+                        outline: none;
+                        background-color: transparent;
+                    }
+                }
+                .blog_drop {
+                    position: relative;
+                    .dropdown_main_menu {
+                        @include dropdown_main_menu();
+                        .dropdown_menu {
+                            @include dropdown_menu();
+                        }
+                    }
+
+                    &:hover {
+                        .dropdown_main_menu {
+                            height: 120px;
+
+                            .dropdown_menu {
+                                transform: translateY(0%);
+                            }
+                        }
+                    }
+
+                    .blog_btn {
+                        border: none;
+                        outline: none;
+                        background-color: transparent;
+                    }
+                }
+            }
+
+            .search_cart {
+                @include flex-cent();
+                justify-content: end;
+                button {
+                    outline: none;
+                    border: none;
+                    background-color: transparent;
+                    margin: 0;
+                    padding: 20px 10px;
+                    font-size: 20px;
+                    color: black;
+                }
+                a {
+                    text-decoration: none;
+                    margin: 0;
+                    padding: 20px 10px;
+                    font-size: 20px;
+                    color: black;
+                }
+            }
+
+            .search_bar_main {
+                position: relative;
+                .search_bar {
+                    @include flex-cent();
+                    background-color: #b08ead;
+                    color: #fff;
+                    z-index: -999;
+                    width: 100%;
+                    height: 0;
+                    overflow: hidden;
+                    transition: height 0.5s ease-in-out;
+                    .search_bar_input {
+                        font-size: 18px;
+                        padding-left: 20px;
+                        width: 100%;
+                        background-color: #b08ead;
+                        color: #fff;
+                        border: none;
+                        outline: none;
+                        transition: height 0.5s ease-in-out;
+                        &::placeholder {
+                            color: #fff;
+                        }
+                    }
+                    p {
+                        font-size: 16px;
+                        margin: 0;
+                        padding-right: 20px;
+                        display: none;
+                        cursor: pointer;
+                    }
+                }
+                .search_visible {
+                    height: 50px;
+                    transition: height 0.5s ease-in-out;
+                }
+                .search_hidden {
+                    height: 0;
+                    transition: height 0.5s ease-in-out;
+                }
+            }
+        }
+    }
+}

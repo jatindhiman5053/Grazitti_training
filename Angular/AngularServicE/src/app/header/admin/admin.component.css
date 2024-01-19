@@ -1,0 +1,8 @@
+.adminform{
+    margin-block: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.userpass{
+    width: 45%;
+}

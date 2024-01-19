@@ -1,0 +1,14 @@
+<h2>jQuery and AJAX is FUN!!!</h2>
+<p id="p1">This is some text in a paragraph.</p>
+<img src="./images/mountains.jpg" id="pinkmountain" class="pinkmountain" alt="Mountain image">
+
+
+
+<form action="" class="mt-4">
+    <h1>Login</h1>
+    <label for="">Username</label>
+    <input type="text" id="Username" class="form-control mb-2">
+    <label for="">Password</label>
+    <input type="password" id="Username" class="form-control mb-3">
+    <button type="submit" class="form-control mb-3">Submit</button>
+</form>

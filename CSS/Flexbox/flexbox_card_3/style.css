@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-image: url(./accets/images/background.jpg);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+
+.wrapper{
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 25%;
+    padding-bottom: 20px;
+}
+
+.content{
+    width: 84%;
+    margin: 20px auto;
+}
+
+h1,
+li {
+    color: white;
+}
+
+h1{
+    font-size: 37px;
+    font-weight: 900;
+    font-family: 'Righteous';
+}
+
+li{
+    text-align: left;
+    font-family: 'Lato';
+    line-height: 1.5;
+}
+
+
+.car_image {
+    background-image: url(./accets/images/Supra\ MK5.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.outline{
+    border: 1px solid rgba(0, 212, 255, 0.6);
+    color: rgba(0, 212, 255, 0.9);
+    margin-right: 15px;
+}
+
+.fill{
+    background-color: rgba(0, 212, 255, 0.6);
+    border: none;
+}
+
+.outline:hover{
+    border: 1px solid white;
+    color: white;
+    scale: 1.2;
+    transition: .2s ease;
+}
+
+.fill:hover{
+    scale: 1.2;
+    transition: .2s ease;
+}

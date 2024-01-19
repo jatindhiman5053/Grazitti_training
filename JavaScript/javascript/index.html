@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+
+    <title>Document</title>
+
+
+
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #pos_number {
+            font-size: 20px;
+            border: 2px solid red;
+        }
+
+        .productImg>img {
+            width: 100%;
+            height: 300px;
+            border-radius: 50px;
+        }
+
+        .allProducts {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .productInfo{
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+        .Product {
+            border: 1px solid red;
+            width: 49%;
+            padding: 20px;
+            border-radius: 50px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            max-height: 100vh;
+            background-color: #A7D397;
+        }
+
+        p {
+            font-size: 15px;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        img {
+            width: 100%;
+            height: 150px;
+        }
+
+        .container {
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 50px;
+            padding: 30px;
+
+        }
+
+        .cards {
+            background-color: #FFBF9B;
+            width: 25%;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+
+        hr{
+            border: 5px solid #3A4D39;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <section>
+        <div class="wrapper">
+            <div class="container">
+                <div class="row align-items-center flex-column gap-3">
+
+
+                    <div class="col-lg-5 col-md-5">
+                        <h1>hiii javascript</h1>
+                        <div class="calculator d-flex flex-column gap-5 mt-3">
+
+                            <div class="form">
+                                <h1>Simple Form</h1>
+                                <form target="_blank" class="">
+                                    <input type="text" name="" id="name" placeholder="First Name"
+                                        class="form-control"><br>
+                                    <input type="text" class="form-control" name="" id="last_name"
+                                        placeholder="Last Name"><br>
+                                    <input type="number" name="" id="age" class="form-control" placeholder="Age"><br>
+                                    <input type="text" name="" id="address" class="form-control"
+                                        placeholder="Address"><br>
+                                    <input type="button" class="btn btn-primary" value="Submit" id="submit">
+                                </form>
+                            </div>
+
+
+
+                            <hr>
+                            <div class="cal d-flex gap-2 flex-column">
+                                <div class="add">
+                                    <h1>Calculator</h1>
+                                    <input type="number" id="one" class="form-control"><br>
+                                    <input type="number" id="two" class="form-control"><br>
+                                    <input type="button" class="btn btn-primary" value="+" id="sum">
+                                    <input type="button" class="btn btn-primary" value="-" id="sub">
+                                    <input type="button" class="btn btn-primary" value="X" id="multi">
+                                    <input type="button" class="btn btn-primary" value="/" id="divide">
+                                </div>
+                                <p class="" id="result"></p>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+
+
+                    <hr>
+                    <div class="col-lg-5 col-md-5">
+                        <div class="date">
+                            <h1>Age calculator</h1>
+                            <input type="number" id="date" placeholder="Year" class="form-control"><br>
+                            <input type="button" class="btn btn-primary" value="calculate" id="DOB_calculate">
+                            <p id="result_date"></p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <hr>
+    <section class="event_handling">
+        <div class="container">
+            <div class="row align-items-center flex-column gap-3 my-5">
+                <div class="col-lg-5 col-md-5">
+                    <div class="events d-flex flex-column">
+                        <h1>Event Form</h1>
+                        <h1>Onclick Event</h1>
+                        <form target="_blank" class="">
+                            <input type="text" id="E_F_name" placeholder="First Name" class="form-control"><br>
+                            <input type="text" id="E_L_name" class="form-control" placeholder="Last Name"><br>
+                            <input type="number" id="E_age" class="form-control" placeholder="Age"><br>
+                            <input type="email" id="E_email" class="form-control" placeholder="Email"><br>
+                            <input type="text" id="E_address" class="form-control" placeholder="Address"><br>
+
+                            <button type="button" class="btn btn-primary " id="E_submit" onclick="display_event_data()"
+                                onchange="change_to_uppercase()">Submit</button>
+
+                        </form>
+
+                        <div id="Event_result"></div>
+
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <hr>
+    <section>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1>OnMouse Enter/Exit Events</h1>
+                    <div class="red border border-danger m-5" onmouseenter="mouse_enter_red()"
+                        onmouseleave="mouse_exit_red()">
+
+                        <div class="black border m-5" onmouseenter="mouse_enter_black()"
+                            onmouseleave="mouse_exit_black()">
+
+                            <div class="primary border border-primary m-5" onmouseenter="mouse_enter_primary()"
+                                onmouseleave="mouse_exit_primary()">
+
+                                <div class="secondary border border-secondary m-5"
+                                    onmouseenter="mouse_enter_secondary()" onmouseleave="mouse_exit_secondary()">
+
+                                    <p class="p-3">hiii everyone</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <hr>
+    <section>
+        <div class="container my-5">
+            <div class="row justify-content-center my-5">
+                <div class="col-lg-6 my-5">
+                    <div class="color_selector my-5 d-flex flex-column align-items-center">
+                        <h1 class="mb-5">OnChange Event</h1>
+                        <label for="car_Change">Select Cars</label>
+                        <select name="cars" id="car_Change" onchange="on_change_value()">
+                            <option value="Supra">Supra</option>
+                            <option value="GTR">GTR</option>
+                            <option value="Skyline">Skyline</option>
+                            <option value="Porsche 911">Porsche 911</option>
+                            <option value="Dodge Challenger">Dodge Challenger</option>
+                            <option value="Ford Mustang Shelby GT350">Ford Mustang Shelby GT350</option>
+                        </select>
+
+                        <p id="car_display" class="mt-3"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--          "onchange"    "onclick"    "onmouseover"     "onmouseout"     "onkeydown"     "onload"          -->
+
+
+
+
+<hr>
+    <section>
+        <div class="container">
+            <div class="row justify-content-center">
+                <h1>Event Bubbling and Event Delegation</h1>
+                <div class="col-lg-10 col-md-10">
+
+                    <div id="grandparent" class=" border border-danger m-5 border-5">
+                        Grandparent Div
+
+                        <div id="parent" class="border border-primary m-5 border-5">
+                            Parent Div
+
+                            <div id="child" class=" border border-black m-5 border-5">
+                                <p class="p-5">Child Div</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <hr>
+    <section class=" p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <p id="pos_number" class="p-5"></p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+    <hr>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="all_cards d-flex flex-wrap gap-5 justify-content-evenly" id="all_cards">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <hr>
+    <section>
+        <div class="container ">
+            <div class="row">
+                <div class="col-lg-12  border border-danger border-2 d-flex flex-column gap-5">
+
+                    <div class="shopping_items d-flex justify-content-between m-5">
+
+                        <div class="site_item text-center">
+                            <p id="kurta">Kurta</p>
+                            <button class="add_cart" onclick="addItem('Kurta')">Add to Cart</button>
+                        </div>
+
+                        <div class="site_item text-center">
+                            <p id="Shirt">Shirt</p>
+                            <button class="add_cart" onclick="addItem('Shirt')">Add to Cart</button>
+                        </div>
+
+                        <div class="site_item text-center">
+                            <p id="T-shir">T-shirt</p>
+                            <button class="add_cart" onclick="addItem('T-shirt')">Add to Cart</button>
+                        </div>
+
+                        <div class="site_item text-center">
+                            <p id="Jean">Jean</p>
+                            <button class="add_cart" onclick="addItem('Jean')">Add to Cart</button>
+                        </div>
+
+                        <div class="site_item text-center">
+                            <p id="Shorts">Shorts</p>
+                            <button class="add_cart" onclick="addItem('Shorts')">Add to Cart</button>
+                        </div>
+
+
+                    </div>
+
+                    <div class="item d-flex gap-1">
+                        <p>Cart Items: </p>
+                        <p id="promise_cart"></p>
+                        <p id="cart_payment"></p>
+                    </div>
+
+                    <div class="error d-flex gap-1">
+                        <p>Cart Empty error: </p>
+                        <p id="cart_error"></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <hr>
+<!-- Data Using Promises -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Data Using Promises</h1>
+                    <div class="cart mb-5">
+                        <button>Cart Items</button>
+                    </div>
+                    <div class="allProducts" id="allProducts">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <hr>
+    <!-- Data Using Async/Await -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Data Using Async/Await</h1>
+                    <div class="cart mb-5">
+                        <button>Cart Items</button>
+                    </div>
+
+                    <div class="awaitProducts" id="awaitProducts">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script src="./scriptloop.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+.outer{
+    width: 300px;
+    height: 300px;
+}
+
+.outer:hover .inner{
+    width: 300px;
+    height: 300px;
+    transform: scale(1.1);
+}

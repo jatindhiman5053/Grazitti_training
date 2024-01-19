@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="all_cards">
+        <div class="card" *ngFor="let user of users">
+            <div class="card_content">
+                <h1>Name: {{user?.name}}</h1>
+                <p>Username: {{user?.username}}</p>
+                <p>Company: {{user?.company?.name}}</p>
+                <p>Email: {{user?.email}}</p>
+            </div>
+
+            <div class="card_start">
+                <p>Start <span>04.11.2022</span></p>
+            </div>
+
+        </div>
+    </div>
+</div>
+

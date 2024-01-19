@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding-inline: 40px;
+    font-family: 'Hind', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #707070;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+}

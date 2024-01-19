@@ -1,0 +1,122 @@
+:root {
+    --btn-color: #7E22CE;
+}
+
+header,
+nav {
+    background-color: #fff;
+}
+
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    /* top: 5%; */
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+}
+
+.headertabs ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    align-items: center;
+    font-size: 20px;
+}
+
+.headertabs {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.headerbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.headermenu {
+    display: flex;
+    gap: 40px;
+}
+
+.headerbtn button {
+    padding: 10px 20px;
+    font-size: 17px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    background-color: var(--btn-color);
+}
+
+.halfmoon {
+    color: var(--btn-color);
+}
+
+.headerbtn button:hover {
+    background-color: var(--btn-color);
+}
+
+.toogle {
+    background-color: #111827;
+    color: white;
+}
+
+.homeimagemain {
+    overflow: hidden;
+}
+
+.homecontent {
+    padding-top: 35%;
+}
+
+.homeimage {
+    background-image: url(../images/photo-1498050108023-c5249f4df085.avif);
+    background-position: 15% 0%;
+    object-fit: cover;
+    height: 500px;
+    background-repeat: no-repeat;
+    clip-path: polygon(10% 0px, 100% 0%, 100% 100%, 0px 100%);
+}
+
+.mainhomecontent {
+    padding-top: 10%;
+}
+
+.course-blog-btn {
+    display: flex;
+    gap: 20px;
+}
+
+.Exploreblog,
+.freecourse {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.freecourse {
+    background-color: black;
+    color: white;
+}
+
+.Exploreblog {
+    background-color: lightgray;
+}
+
+.recommandedmain{
+    margin-top: 40px;
+}
+
+.recommandedheading {
+    text-align: center;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        console.log("Outer #1");
+        console.group();
+        console.log("Inner #1");
+        console.log("Inner #2");
+        
+        
+        console.log("Inner #3");
+        console.log("Inner #4");
+
+        console.groupEnd();
+
+        console.log("Outer #2");
+    </script>
+</body>
+
+</html>

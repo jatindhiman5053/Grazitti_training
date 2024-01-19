@@ -1,0 +1,78 @@
+body {
+    background: #425a52;
+}
+
+
+.container {
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    box-sizing: border-box;
+    object-fit: contain;
+    height: inherit;
+    border-radius: 20px;
+    transition: .4s;
+}
+
+.content {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.img1 ,.img2{
+    width: 40%;
+    overflow: hidden;
+    border-radius: 30px;
+    position: relative;
+}
+
+img:hover {
+    transform: scale(1.2);
+    transition: .4s ease-in-out;
+}
+
+.pic_name {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    font-weight: bold;
+    top: 80%;
+    left: 10%;
+    text-transform: uppercase;
+}
+
+.tranz {
+    display: none;
+    height: inherit;
+    position: absolute;
+    background-color: lightgray;
+}
+
+
+.img1:hover .tranz, .img2:hover .tranz{
+    width: 100%;
+    display: contents;
+}
+
+
+@media screen and (max-width: 480px){
+    .container{
+        height: 100vh;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 40px;
+    }
+
+    .img1 ,.img2{
+        width: 80%;
+    }
+}

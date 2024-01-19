@@ -1,0 +1,109 @@
+@mixin flex-cent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-r {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin dropdown_main_menu {
+    position: absolute;
+    width: 170px;
+    height: 0;
+    color: #fff;
+    top: 62px;
+    background-color: #b08ead;
+    overflow: hidden;
+    z-index: 100;
+    transition: height 0.5s ease-in-out;
+}
+
+@mixin dropdown_menu {
+    list-style: none;
+    z-index: 100;
+    width: 170px;
+    padding: 30px;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+footer {
+    .container {
+        .row {
+            align-items: center;
+            .footer_menu_main {
+                display: flex;
+                padding-block: 5%;
+                justify-content: space-between;
+
+                .non_social_content {
+                    .footer_menu {
+                        display: flex;
+                        gap: 30px;
+                        a {
+                            text-decoration: none;
+                            color: #707070;
+                            &:hover {
+                                color: #f4edf2;
+                                transition: 0.5s ease-in-out;
+                            }
+                        }
+                    }
+                }
+                .social_menu {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    justify-content: end;
+                    .social_icons {
+                        align-items: center;
+                        display: flex;
+                        justify-content: center;
+                        text-decoration: none;
+                        width: 45px;
+                        text-align: center;
+                        height: 45px;
+                        background-color: #4b3049;
+                        color: #f4edf2;
+                        border-radius: 50px;
+                        &:hover {
+                            transition: 0.5s ease-in-out;
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer_content {
+        display: flex;
+        justify-content: space-around;
+        background-color: #f4edf2;
+        align-items: center;
+        padding: 30px;
+        gap: 150px;
+        p {
+            margin: 0;
+            color: #795376;
+        }
+        .terms_faq {
+            display: flex;
+            gap: 60px;
+            p {
+                cursor: pointer;
+            }
+        }
+    }
+}
